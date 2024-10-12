@@ -1,7 +1,7 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const vehicleRoutes = require('./routes/vehicleRoutes');
-const fs = require('fs');
+import express from 'express';
+import bodyParser from 'body-parser';
+import vehicleRoutes from './routes/vehicleRoutes.js';
+import fs from 'fs';
 
 const dataDir = './data';
 const dataFile = `${dataDir}/vehicles.json`;
