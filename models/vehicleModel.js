@@ -1,4 +1,5 @@
-const fs = require('fs');
+import fs from 'fs';
+
 const filePath = './data/vehicles.json';
 
 class VehicleModel {
@@ -35,4 +36,4 @@ class VehicleModel {
   }
 }
 
-module.exports = VehicleModel;
+export default VehicleModel;
