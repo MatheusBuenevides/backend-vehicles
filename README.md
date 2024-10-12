@@ -46,7 +46,7 @@ backend-vehicles/
 1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/vehicle-crud-backend.git
+git clone https://github.com/MatheusBuenevides/vehicle-crud-backend.git
 cd vehicle-crud-backend
 ```
 
