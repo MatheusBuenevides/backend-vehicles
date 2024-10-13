@@ -2,6 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import vehicleRoutes from './routes/vehicleRoutes.js';
 import fs from 'fs';
+import cors from 'cors';
 
 const dataDir = './data';
 const dataFile = `${dataDir}/vehicles.json`;
@@ -9,6 +10,7 @@ if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir);
 if (!fs.existsSync(dataFile)) fs.writeFileSync(dataFile, '[]');
 
 const app = express();
+app.use(cors());
 app.use(bodyParser.json());
 app.use('/vehicles', vehicleRoutes);
 
