@@ -1,5 +1,5 @@
 import fs from 'fs';
-
+import { v4 as uuidv4 } from 'uuid';
 const filePath = './data/vehicles.json';
 
 class VehicleModel {
@@ -14,6 +14,7 @@ class VehicleModel {
 
   static create(vehicle) {
     const vehicles = this.getAll();
+    vehicle.id = uuidv4();
     vehicles.push(vehicle);
     this.saveAll(vehicles);
   }
